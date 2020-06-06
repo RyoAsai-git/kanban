@@ -12,11 +12,14 @@ class ListController < ApplicationController
     end
   end
 
+  def edit
+  end
+
 
   private
 
   def list_params
     params.require(:list).permit(:title).merge(user: current_user) 
   end
-  
+
 end
