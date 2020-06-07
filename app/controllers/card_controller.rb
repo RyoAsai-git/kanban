@@ -1,6 +1,6 @@
 class CardController < ApplicationController
 
-  before_action :set_card, only: %i(show edit update)
+  before_action :set_card, only: %i(show edit update destroy)
 
   def new
     @card = Card.new
