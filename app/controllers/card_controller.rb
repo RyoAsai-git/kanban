@@ -1,6 +1,7 @@
 class CardController < ApplicationController
 
-  before_action set_card, only: %i(show edit update)
+  before_action :set_card, only: %i(show edit update)
+
   def new
     @card = Card.new
     @list = List.find_by(id: params[:list_id])
