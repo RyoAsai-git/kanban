@@ -17,6 +17,12 @@ class CardController < ApplicationController
     @card = Card.find_by(id: params[:id])
   end
 
+  def edit
+    @card = Card.find_by(id: params[:id])
+  end
+
+  
+
   private
   def card_params
     params.require(:card).permit(:title, :memo, :list_id)
